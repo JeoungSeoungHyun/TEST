@@ -1,18 +1,22 @@
-SELECT type as "암종",occur_count as "발생자수"
+SELECT * 
+FROM 
+cancer;
+
+SELECT 암종류,발생자수
 FROM cancer 
-WHERE occur_count = 
+WHERE 발생자수 = 
 (
-    SELECT max(occur_count)
+    SELECT max(발생자수)
     FROM cancer
-    WHERE NOT (TYPE LIKE '%모든암%' OR TYPE LIKE '%기타암%')
+    WHERE NOT (암종류 LIKE '%모든암%' OR 암종류 LIKE '%기타암%')
 );
 
 SELECT *
 FROM 
 (
-    SELECT c.*, rank() OVER(ORDER BY occur_count DESC) as rank
+    SELECT rank() OVER(ORDER BY 발생자수 DESC) as rank,c.*
     FROM cancer c
-    WHERE NOT (TYPE LIKE '%모든암%' OR TYPE LIKE '%기타암%')
+    WHERE NOT (암종류 LIKE '%모든암%' OR 암종류 LIKE '%기타암%')
 )
 WHERE RANK <6;
 
@@ -21,10 +25,10 @@ FROM
 (
     SELECT *
     FROM cancer c
-    WHERE NOT (TYPE LIKE '%모든암%' OR TYPE LIKE '%기타암%')
+    WHERE NOT (암종류 LIKE '%모든암%' OR 암종류 LIKE '%기타암%')
 )
-WHERE TO_NUMBER(fraction)>=10;
+WHERE TO_NUMBER(분율)>=10;
 
-SELECT type as "암종류",occur_count as "발생자 수"
+SELECT 암종류,발생자수
 FROM cancer
-WHERE TYPE LIKE '%백혈병%';
+WHERE 암종류 LIKE '%백혈병%';
