@@ -1,0 +1,10 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\green_workspace\\downloads\\poi-3.11.jar",
+        "c:\\green_workspace\\downloads\\poi-ooxml-3.11.jar",
+        "c:\\green_workspace\\downloads\\poi-ooxml-schemas-3.11.jar",
+        "c:\\green_workspace\\downloads\\xmlbeans-2.6.0.jar",
+        "c:\\green_workspace\\downloads\\ojdbc8-21.1.0.0.jar"
+    ]
+}
