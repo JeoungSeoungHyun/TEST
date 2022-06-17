@@ -1,0 +1,15 @@
+INDEX VERSION 1.131+C:\green_workspace\java_study_lab\.metadata\.plugins\org.eclipse.jdt.core
+3634945195.index
+3649999906.index
+1238220680.index
+461093958.index
+716682630.index
+3939699067.index
+3321338370.index
+4069220068.index
+2475762417.index
+4140928472.index
+2114752229.index
+332420578.index
+1543764611.index
+1865797976.index
